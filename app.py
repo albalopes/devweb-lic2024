@@ -8,7 +8,10 @@ def index():
 
 @app.route('/contato')
 def contato():
-    return 'alba.lopes@ifrn.edu.br'
+    telefone = '1234-5678'
+    email = 'alba.lopes@ifrn.edu.br'
+    return render_template('contato.html', x = email, tel = telefone)
+    
 
 @app.route('/alunos')
 def alunos():
@@ -18,6 +21,10 @@ def alunos():
 @app.route('/professores')
 def professores():
     return render_template('professores.html')
+
+@app.route('/usuario/<nome>')
+def usuario(nome):
+    return render_template('usuario.html', nome=nome)
 
 
 
