@@ -45,3 +45,7 @@ def dobro(n):
 def soma(n1, n2):
     result = n1 + n2
     return render_template('soma.html', a=n1, b=n2, c=result)
+
+@app.route('/perfil/<nome>')
+def perfil(nome):
+    return render_template('perfil.html', nome=nome)

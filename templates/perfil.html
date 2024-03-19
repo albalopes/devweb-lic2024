@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
 </head>
 <body>
-    <p>
-        <img src="{{url_for('static', filename='imgs/calculadora.jpg')}}">
-        A soma de {{a}} e {{b}} é {{c}}
-    </p>
+    <h2>Olá, {{nome}}</h2>
+    <img src="{{url_for('static', filename='imgs/'+nome+'.webp')}}" class="thumb">
 </body>
 </html>
